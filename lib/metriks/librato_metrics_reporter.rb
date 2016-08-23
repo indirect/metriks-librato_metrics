@@ -150,6 +150,8 @@ module Metriks
     end
 
     def datapoint(name, value, time, attributes = {})
+      return if value.nil?
+
       idx = @data.length
 
       if prefix
